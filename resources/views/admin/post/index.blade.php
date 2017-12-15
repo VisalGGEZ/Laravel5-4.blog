@@ -36,17 +36,18 @@
                 @foreach($posts as $post)
                     <tr>
                         <td>
-                            <img src="http://localhost:8000/{{$post->featured}}" alt="{{$post->title}}" width=100px" height="60px">
+                            <img src="http://localhost:8000/{{$post->featured}}" alt="{{$post->title}}" width=100px"
+                                 height="60px">
                         </td>
                         <td>
                             {{$post->title}}
                         </td>
                         <td>
-                            <a href="#" class="btn btn-danger">x</a>
+                            <a href="{{route('post.trash', ['id' => $post->id])}}" class="btn btn-default">Trash</a>
                         </td>
 
                         <td>
-                            <a href="#" class="btn btn-primary">Edit</a>
+                            <a href="{{route('post.edit', ['id' => $post->id])}}" class="btn btn-default">Edit</a>
                         </td>
                     </tr>
                 @endforeach
