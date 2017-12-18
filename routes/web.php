@@ -11,6 +11,11 @@
 |
 */
 
+
+Route::get('/test', function () {
+    return App\User::find(1)->profile;
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -24,6 +29,48 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
         'uses' => 'HomeController@index',
         'as' => 'home'
     ]);
+
+    Route::group(['prefix' => 'user'], function () {
+
+        Route::post('/profile/update/{id}', [
+            'uses' => 'ProfileController@update',
+            'as' => 'user.profile.update'
+        ]);
+
+        Route::get('profile/index', [
+            'uses' => 'ProfileController@index',
+            'as' => 'user.profile.index'
+        ]);
+
+        Route::get('index', [
+            'uses' => 'UserController@index',
+            'as' => 'user.index'
+        ]);
+        Route::get('create', [
+            'uses' => 'UserController@create',
+            'as' => 'user.create'
+        ]);
+
+        Route::post('store', [
+            'uses' => 'UserController@store',
+            'as' => 'user.store'
+        ]);
+
+        Route::get('up/{id}', [
+            'uses' => 'UserController@beAdmin',
+            'as' => 'user.up'
+        ])->middleware('admin');
+
+        Route::get('down/{id}', [
+            'uses' => 'UserController@beUser',
+            'as' => 'user.down'
+        ]);
+
+        Route::get('delete/{id}', [
+            'uses' => 'UserController@delete',
+            'as' => 'user.delete'
+        ]);
+    });
 
     Route::group(['prefix' => 'post'], function () {
 

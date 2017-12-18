@@ -6,7 +6,7 @@
 
         <ul class="list-group">
 
-        @foreach($errors->all() as $error)
+            @foreach($errors->all() as $error)
 
                 <li class="list-group-item panel-danger text-danger">
                     {{$error}}
@@ -34,13 +34,13 @@
                     <label for="featured" class="">Featured</label>
                     <input type="file" class="form-control" name="featured">
                 </div>
-                
+
                 <div class="form-group">
-                    <label for="category_id" >Select a Category</label>
+                    <label for="category_id">Select a Category</label>
                     <select name="category_id" id="category" class="form-control">
                         @foreach($categories as $category)
                             <option value="{{$category->id}}">{{$category->name}}</option>
-                            @endforeach
+                        @endforeach
                     </select>
                 </div>
 
@@ -57,7 +57,7 @@
                             </label>
                         </div>
 
-                        @endforeach
+                    @endforeach
 
                 </div>
 
@@ -74,5 +74,19 @@
             </form>
         </div>
     </div>
+@stop
+
+@section('script')
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#content').summernote();
+        });
+    </script>
+@stop
+
+@section('style')
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.css" rel="stylesheet">
 @stop
 

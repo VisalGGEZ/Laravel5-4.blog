@@ -41,7 +41,7 @@ class TagController extends Controller
         ]);
 
         Tag::create([
-            'tag' => $request -> tag
+            'tag' => $request->tag
         ]);
 
         Session::flash('success', 'Tag was created Successfully');
@@ -88,9 +88,9 @@ class TagController extends Controller
 
         $tag = Tag::find($id);
 
-        $tag->tag = $request -> tag;
+        $tag->tag = $request->tag;
 
-        $tag -> save();
+        $tag->save();
 
         Session::flash('success', 'Tag was updated Successfully');
 
@@ -105,7 +105,13 @@ class TagController extends Controller
      */
     public function destroy($id)
     {
-        $tag = Tag::where('id', $id);
+        $tag = Tag::find($id);
+
+
+        foreach ($tag->posts as $post) {
+            $post->forceDelete();
+        }
+
         $tag->delete();
 
         Session::flash('success', 'Tag was deleted Successfully');

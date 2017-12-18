@@ -33,24 +33,32 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($posts as $post)
+                @if($posts->count() == 0)
                     <tr>
-                        <td>
-                            <img src="http://localhost:8000/{{$post->featured}}" alt="{{$post->title}}" width=100px"
-                                 height="60px">
-                        </td>
-                        <td>
-                            {{$post->title}}
-                        </td>
-                        <td>
-                            <a href="{{route('post.trash', ['id' => $post->id])}}" class="btn btn-default">Trash</a>
-                        </td>
-
-                        <td>
-                            <a href="{{route('post.edit', ['id' => $post->id])}}" class="btn btn-default">Edit</a>
+                        <td colspan="3">
+                            <h3 class="text-info text-center">There is no any records.</h3>
                         </td>
                     </tr>
-                @endforeach
+                @else
+                    @foreach($posts as $post)
+                        <tr>
+                            <td>
+                                <img src="http://localhost:8000/{{$post->featured}}" alt="{{$post->title}}" width=100px"
+                                     height="60px">
+                            </td>
+                            <td>
+                                {{$post->title}}
+                            </td>
+                            <td>
+                                <a href="{{route('post.trash', ['id' => $post->id])}}" class="btn btn-default">Trash</a>
+                            </td>
+
+                            <td>
+                                <a href="{{route('post.edit', ['id' => $post->id])}}" class="btn btn-default">Edit</a>
+                            </td>
+                        </tr>
+                    @endforeach
+                @endif
                 </tbody>
             </table>
         </div>

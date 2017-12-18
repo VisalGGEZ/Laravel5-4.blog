@@ -13,6 +13,9 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css" rel="stylesheet">
+
+    @yield('style')
+
 </head>
 <body>
 <div id="app">
@@ -105,6 +108,18 @@
                     <li class="list-group-item">
                         <a href="{{ route('tag.create')  }}">Create New Tags</a>
                     </li>
+
+                    <li class="list-group-item">
+                        <a href="{{ route('user.profile.index')  }}">My Profile</a>
+                    </li>
+
+                    <li class="list-group-item">
+                        <a href="{{ route('user.index')  }}">Users</a>
+                    </li>
+
+                    <li class="list-group-item">
+                        <a href="{{ route('user.create')  }}">New User</a>
+                    </li>
                 </ul>
             </div>
         @endif
@@ -124,13 +139,16 @@
 
 <script>
     @if(Session::has('success'))
-        toastr.success("{{Session::get('success')}}")
+    toastr.success("{{Session::get('success')}}")
     @endif
 
     @if(Session::has('info'))
     toastr.info("{{Session::get('info')}}")
     @endif
 </script>
+
+
+@yield('script')
 
 </body>
 </html>

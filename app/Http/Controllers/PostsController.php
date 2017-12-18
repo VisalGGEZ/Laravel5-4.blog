@@ -31,6 +31,7 @@ class PostsController extends Controller
     public function create()
     {
         $categories = Category::all();
+        $tags = Tag::all();
 
         if ($categories->count() == 0) {
             Session::flash('info', "Create categories before you post any blog. Thanks!");
@@ -38,7 +39,13 @@ class PostsController extends Controller
             return redirect()->back();
         }
 
-        return view('admin.post.create')->with('categories', $categories)->with('tags', Tag::all());
+        if ($tags->count() == 0) {
+            Session::flash('info', "Create tags before you post any blog. Thanks!");
+
+            return redirect()->back();
+        }
+
+        return view('admin.post.create')->with('categories', $categories)->with('tags', $tags);
     }
 
     /**
