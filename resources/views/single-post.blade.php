@@ -1,4 +1,9 @@
 @extends('layouts.frontend')
+
+@section('title')
+    {{$title->site_name}} | Post
+@stop
+
 @section('content')
     <div class="row ">
         <main class="main">
@@ -35,7 +40,7 @@
 
                             <span class="category">
                                 <i class="seoicon-tags"></i>
-                                <a href="#">{{$single_post->category->name}}</a>
+                                <a href="{{route('category', ['id' => $single_post->category->id])}}">{{$single_post->category->name}}</a>
                             </span>
 
                         </div>
@@ -57,7 +62,8 @@
 
                                     <div class="tags-wrap">
                                         @foreach($single_post->tags as $tag)
-                                            <a href="#" class="w-tags-item">{{$tag->tag}}</a>
+                                            <a href="{{route('tag', ['id' => $tag->id])}}"
+                                               class="w-tags-item">{{$tag->tag}}</a>
                                         @endforeach
                                     </div>
                                 </div>
@@ -161,7 +167,7 @@
                         </div>
                     </div>
 
-                   @include('includes.disqus')
+                    @include('includes.disqus')
                 </div>
 
                 <div class="row">
