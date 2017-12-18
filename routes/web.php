@@ -16,9 +16,14 @@ Route::get('/test', function () {
     return App\User::find(1)->profile;
 });
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [
+    'uses' => 'FrontEndController@index'
+]);
+
+Route::get('/post/{slug}', [
+    'uses' => 'FrontEndController@singlePost',
+    'as' => 'post.single'
+]);
 
 Auth::routes();
 
@@ -182,6 +187,19 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
         Route::post('/update/{id}', [
             'uses' => 'CategoryController@update',
             'as' => 'category.update'
+        ]);
+    });
+
+
+    Route::group(['prefix' => 'settings'], function () {
+        Route::get('/index', [
+            'uses' => 'SettingController@index',
+            'as' => 'settings.index'
+        ]);
+
+        Route::post('/update/{id}', [
+            'uses' => 'SettingController@update',
+            'as' => 'settings.update'
         ]);
     });
 

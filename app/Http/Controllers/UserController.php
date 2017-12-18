@@ -47,6 +47,8 @@ class UserController extends Controller
             'avatar' => 'upload/avatar/man.png',
         ]);
 
+        Session::flash('success', 'You have need created new user.');
+
         return redirect()->back();
     }
 

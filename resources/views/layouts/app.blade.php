@@ -118,8 +118,14 @@
                     </li>
 
                     <li class="list-group-item">
-                        <a href="{{ route('user.create')  }}">New User</a>
+                        <a href="{{ route('user.create')  }}">New Users</a>
                     </li>
+
+                    @if(Auth::user()->admin)
+                        <li class="list-group-item">
+                            <a href="{{ route('settings.index')  }}">Setting</a>
+                        </li>
+                    @endif
                 </ul>
             </div>
         @endif
