@@ -1,7 +1,7 @@
 @extends('layouts.frontend')
 
 @section('title')
-    {{$settings->site_name}} | Tag
+    {{$settings->site_name}}
 @stop
 
 @section('content')
@@ -11,7 +11,7 @@
 
         <div class="stunning-header stunning-header-bg-lightviolet">
             <div class="stunning-header-content">
-                <h1 class="stunning-header-title">#{{$name}}</h1>
+                <h1 class="stunning-header-title">{{$queryKey}}</h1>
             </div>
         </div>
 

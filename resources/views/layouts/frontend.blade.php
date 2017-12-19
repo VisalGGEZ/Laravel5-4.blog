@@ -51,157 +51,6 @@
         @yield('content')
     </div>
 
-
-    {{--<div class="container-fluid">--}}
-        {{--<div class="row medium-padding120 bg-border-color">--}}
-            {{--<div class="container">--}}
-                {{--<div class="col-lg-12">--}}
-                    {{--<div class="offers">--}}
-                        {{--<div class="row">--}}
-                            {{--<div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">--}}
-                                {{--<div class="heading">--}}
-                                    {{--<h4 class="h1 heading-title">Laravel 5.3</h4>--}}
-                                    {{--<div class="heading-line">--}}
-                                        {{--<span class="short-line"></span>--}}
-                                        {{--<span class="long-line"></span>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                        {{--<div class="row">--}}
-                            {{--<div class="case-item-wrap">--}}
-                                {{--<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">--}}
-                                    {{--<div class="case-item">--}}
-                                        {{--<div class="case-item__thumb">--}}
-                                            {{--<img src="app/img/3.jpg" alt="our case">--}}
-                                        {{--</div>--}}
-                                        {{--<h6 class="case-item__title"><a href="#">Investigationes demonstraverunt--}}
-                                                {{--legere</a></h6>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
-
-                                {{--<div class="col-lg-4  col-md-4 col-sm-6 col-xs-12">--}}
-                                    {{--<div class="case-item">--}}
-                                        {{--<div class="case-item__thumb">--}}
-                                            {{--<img src="app/img/1.png" alt="our case">--}}
-                                        {{--</div>--}}
-                                        {{--<h6 class="case-item__title">Claritas est etiam processus dynamicus</h6>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
-
-                                {{--<div class="col-lg-4  col-md-4 col-sm-6 col-xs-12">--}}
-                                    {{--<div class="case-item">--}}
-                                        {{--<div class="case-item__thumb mouseover poster-3d lightbox shadow animation-disabled"--}}
-                                             {{--data-offset="5">--}}
-                                            {{--<img src="app/img/2.png" alt="our case">--}}
-                                        {{--</div>--}}
-                                        {{--<h6 class="case-item__title">quod mazim placerat facer possim assum</h6>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    {{--<div class="padded-50"></div>--}}
-                    {{--<div class="offers">--}}
-                        {{--<div class="row">--}}
-                            {{--<div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">--}}
-                                {{--<div class="heading">--}}
-                                    {{--<h4 class="h1 heading-title">Laravel 5.3</h4>--}}
-                                    {{--<div class="heading-line">--}}
-                                        {{--<span class="short-line"></span>--}}
-                                        {{--<span class="long-line"></span>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                        {{--<div class="row">--}}
-                            {{--<div class="case-item-wrap">--}}
-                                {{--<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">--}}
-                                    {{--<div class="case-item">--}}
-                                        {{--<div class="case-item__thumb">--}}
-                                            {{--<img src="app/img/2.png" alt="our case">--}}
-                                        {{--</div>--}}
-                                        {{--<h6 class="case-item__title"><a href="#">Investigationes demonstraverunt--}}
-                                                {{--legere</a></h6>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
-
-                                {{--<div class="col-lg-4  col-md-4 col-sm-6 col-xs-12">--}}
-                                    {{--<div class="case-item">--}}
-                                        {{--<div class="case-item__thumb">--}}
-                                            {{--<img src="app/img/3.jpg" alt="our case">--}}
-                                        {{--</div>--}}
-                                        {{--<h6 class="text-center case-item__title">Claritas est etiam processus--}}
-                                            {{--dynamicus</h6>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
-
-                                {{--<div class="col-lg-4  col-md-4 col-sm-6 col-xs-12">--}}
-                                    {{--<div class="case-item">--}}
-                                        {{--<div class="case-item__thumb mouseover poster-3d lightbox shadow animation-disabled"--}}
-                                             {{--data-offset="5">--}}
-                                            {{--<img src="app/img/4.jpg" alt="our case">--}}
-                                        {{--</div>--}}
-                                        {{--<h6 class="case-item__title">quod mazim placerat facer possim assum</h6>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    {{--<div class="padded-50"></div>--}}
-                    {{--<div class="offers">--}}
-                        {{--<div class="row">--}}
-                            {{--<div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">--}}
-                                {{--<div class="heading">--}}
-                                    {{--<h4 class="h1 heading-title">Laravel 5.3</h4>--}}
-                                    {{--<div class="heading-line">--}}
-                                        {{--<span class="short-line"></span>--}}
-                                        {{--<span class="long-line"></span>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                        {{--<div class="row">--}}
-                            {{--<div class="case-item-wrap">--}}
-                                {{--<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">--}}
-                                    {{--<div class="case-item">--}}
-                                        {{--<div class="case-item__thumb">--}}
-                                            {{--<img src="app/img/5.jpg" alt="our case">--}}
-                                        {{--</div>--}}
-                                        {{--<h6 class="case-item__title"><a href="#">Investigationes demonstraverunt--}}
-                                                {{--legere</a></h6>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
-
-                                {{--<div class="col-lg-4  col-md-4 col-sm-6 col-xs-12">--}}
-                                    {{--<div class="case-item">--}}
-                                        {{--<div class="case-item__thumb">--}}
-                                            {{--<img src="app/img/2.png" alt="our case">--}}
-                                        {{--</div>--}}
-                                        {{--<h6 class="case-item__title">Claritas est etiam processus dynamicus</h6>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
-
-                                {{--<div class="col-lg-4  col-md-4 col-sm-6 col-xs-12">--}}
-                                    {{--<div class="case-item">--}}
-                                        {{--<div class="case-item__thumb mouseover poster-3d lightbox shadow animation-disabled"--}}
-                                             {{--data-offset="5">--}}
-                                            {{--<img src="app/img/6.jpg" alt="our case">--}}
-                                        {{--</div>--}}
-                                        {{--<h6 class="case-item__title">quod mazim placerat facer possim assum</h6>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    {{--<div class="padded-50"></div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-    {{--</div>--}}
-
-    <!-- Subscribe Form -->
-
     <div class="container-fluid bg-green-color">
         <div class="row">
             <div class="container">
@@ -209,14 +58,15 @@
                     <div class="subscribe scrollme">
                         <div class="col-lg-6 col-lg-offset-5 col-md-6 col-md-offset-5 col-sm-12 col-xs-12">
                             <h4 class="subscribe-title">Email Newsletters!</h4>
-                            <form class="subscribe-form" method="post" action="">
+                            <form class="subscribe-form" method="post" action="{{route('subscribe')}}">
+                                {{csrf_field()}}
                                 <input class="email input-standard-grey input-white" name="email" required="required"
                                        placeholder="Your Email Address" type="email">
-                                <button class="subscr-btn">subscribe
+                                <button class="subscr-btn" type="submit">subscribe
                                     <span class="semicircle--right"></span>
                                 </button>
                             </form>
-                            <div class="sub-title">Sign up for new Seosignt content, updates, surveys & offers.</div>
+                            <div class="sub-title">Sign up for new {{$settings->site_name}} content, updates, surveys & offers.</div>
 
                         </div>
 
@@ -243,7 +93,7 @@
             <div class="info">
                 <div class="col-lg-6 col-lg-offset-3">
                     <div class="heading text-center">
-                        <h3 class="heading-title">{{$title->site_name}}</h3>
+                        <h3 class="heading-title">{{$settings->site_name}}</h3>
                         <div class="heading-line">
                             <span class="short-line"></span>
                             <span class="long-line"></span>
@@ -284,7 +134,7 @@
                                       stroke-miterlimit="10" stroke-width="2"/></svg>
                         </div>
                         <div class="content">
-                            <a href="#" class="title">{{$title->contact_number}}</a>
+                            <a href="#" class="title">{{$settings->contact_number}}</a>
                             <p class="sub-title">Mon-Fri 9am-6pm</p>
                         </div>
                     </div>
@@ -318,7 +168,7 @@
                                 </g></svg>
                         </div>
                         <div class="content">
-                            <a href="#" class="title">{{$title->contact_email}}</a>
+                            <a href="#" class="title">{{$settings->contact_email}}</a>
                             <p class="sub-title">online support</p>
                         </div>
                     </div>
@@ -351,7 +201,7 @@
                                       stroke-width="2"></path></svg>
                         </div>
                         <div class="content">
-                            <a href="#" class="title">{{$title->address}}</a>
+                            <a href="#" class="title">{{$settings->address}}</a>
                             <p class="sub-title">795 South Park Avenue</p>
                         </div>
                     </div>
@@ -407,8 +257,8 @@
     <div class="container">
         <div class="row">
             <div class="form_search-wrap">
-                <form>
-                    <input class="overlay_search-input" placeholder="Type and hit Enter..." type="text">
+                <form action="{{route('query.search')}}" method="get">
+                    <input class="overlay_search-input" name="query" placeholder="Type and hit Enter..." type="text">
                     <a href="#" class="overlay_search-close">
                         <span></span>
                         <span></span>
@@ -423,6 +273,8 @@
 
 <!-- JS Script -->
 
+
+
 <script src="{{asset('app/js/jquery-2.1.4.min.js')}}"></script>
 <script src="{{asset('app/js/crum-mega-menu.js')}}"></script>
 <script src="{{asset('app/js/swiper.jquery.min.js')}}"></script>
@@ -434,8 +286,17 @@
 <script src="{{asset('app/js/ScrollMagic.min.js')}}"></script>
 <script src="{{asset('app/js/animation.velocity.min.js')}}"></script>
 
+<script>
+    @if(Session::has('success'))
+    toastr.success("{{Session::get('success')}}")
+    @endif
 
-<!-- ...end JS Script -->
+    @if(Session::has('info'))
+    toastr.info("{{Session::get('info')}}")
+    @endif
+</script>
+
+@yield('addThis')
 
 </body>
 </html>

@@ -11,7 +11,7 @@ class Post extends Model
     use SoftDeletes;
 
     protected $fillable = [
-       'title', 'slug', 'category_id', 'content', 'featured'
+       'title', 'slug', 'category_id', 'content', 'featured', 'user_id'
     ];
 
     protected $dates = ['deleted_at'];
@@ -27,4 +27,9 @@ class Post extends Model
     public function tags(){
         return $this->belongsToMany('App\Tag');
     }
+
+    public function user(){
+        return $this->belongsTo('App\User');
+    }
+
 }

@@ -1,7 +1,7 @@
 @extends('layouts.frontend')
 
 @section('title')
-    {{$title->site_name}}
+    {{$settings->site_name}}
 @stop
 
 @section('content')

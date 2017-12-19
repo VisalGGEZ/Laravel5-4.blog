@@ -1,7 +1,7 @@
 @extends('layouts.frontend')
 
 @section('title')
-    {{$title->site_name}} | Post
+    {{$settings->site_name}} | Post
 @stop
 
 @section('content')
@@ -49,17 +49,11 @@
                             {!! $single_post->content !!}
                         </div>
 
+                        <br>
+
                         <div class="col-lg-12">
                             <aside aria-label="sidebar" class="sidebar sidebar-right">
                                 <div class="widget w-tags">
-                                    <div class="heading text-center">
-                                        <h4 class="heading-title">Tag's Articles</h4>
-                                        <div class="heading-line">
-                                            <span class="short-line"></span>
-                                            <span class="long-line"></span>
-                                        </div>
-                                    </div>
-
                                     <div class="tags-wrap">
                                         @foreach($single_post->tags as $tag)
                                             <a href="{{route('tag', ['id' => $tag->id])}}"
@@ -69,44 +63,21 @@
                                 </div>
                             </aside>
                         </div>
-
-
                     </div>
-
-                    <div class="socials">Share:
-                        <a href="#" class="social__item">
-                            <i class="seoicon-social-facebook"></i>
-                        </a>
-                        <a href="#" class="social__item">
-                            <i class="seoicon-social-twitter"></i>
-                        </a>
-                        <a href="#" class="social__item">
-                            <i class="seoicon-social-linkedin"></i>
-                        </a>
-                        <a href="#" class="social__item">
-                            <i class="seoicon-social-google-plus"></i>
-                        </a>
-                        <a href="#" class="social__item">
-                            <i class="seoicon-social-pinterest"></i>
-                        </a>
-                    </div>
-
                 </article>
 
                 <div class="blog-details-author">
 
                     <div class="blog-details-author-thumb">
-                        <img src="{{asset('app/img/blog-details-author.png')}}" alt="Author">
+                        <img src="{{asset($single_post->user->profile->avatar)}}" alt="Author" class="img-circle"
+                             height="100px" width="100px">
                     </div>
 
                     <div class="blog-details-author-content">
                         <div class="author-info">
-                            <h5 class="author-name">Philip Demarco</h5>
-                            <p class="author-info">SEO Specialist</p>
+                            <h5 class="author-name">{{$single_post->user->name}}</h5>
                         </div>
-                        <p class="text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                            nonummy nibh euismod.
-                        </p>
+                        <p class="text">{{$single_post->user->profile->about}}</p>
                         <div class="socials">
 
                             <a href="#" class="social__item">
@@ -180,4 +151,10 @@
             <!-- End Post Details -->
         </main>
     </div>
+
+@stop
+
+@section('addThis')
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a388c8074e63479"></script>
 @stop

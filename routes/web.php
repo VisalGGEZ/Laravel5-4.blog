@@ -20,6 +20,11 @@ Route::get('/', [
     'uses' => 'FrontEndController@index'
 ]);
 
+Route::post('subscribe', [
+    'uses' => 'FrontEndController@subscribe',
+    'as' => 'subscribe'
+]);
+
 Route::get('/post/{slug}', [
     'uses' => 'FrontEndController@singlePost',
     'as' => 'post.single'
@@ -33,6 +38,11 @@ Route::get('/category/{id}', [
 Route::get('/tag/{id}', [
     'uses' => 'FrontEndController@tag',
     'as' => 'tag'
+]);
+
+Route::get('/results', [
+    'uses' => 'FrontEndController@querySearch',
+    'as' => 'query.search'
 ]);
 
 Auth::routes();
